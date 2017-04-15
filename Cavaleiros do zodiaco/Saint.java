@@ -21,7 +21,7 @@ public class Saint {
         return this.genero;
     }
     
-    public void serGenero(Genero genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 }
