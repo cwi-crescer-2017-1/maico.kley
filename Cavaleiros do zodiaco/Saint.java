@@ -29,11 +29,7 @@ public class Saint {
     public Status getStatus() {
         return this.status;
     }
-    
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-    
+           
     public void perderVida(double vidaPerdida){
         this.vida-=vidaPerdida;
     }
