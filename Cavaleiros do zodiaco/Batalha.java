@@ -1,8 +1,7 @@
 
 public class Batalha
 {
-   private Saint saint1;
-   private Saint saint2;
+   private Saint saint1, saint2;   
    
    public Batalha(Saint saint1, Saint saint2){
        this.saint1 = saint1;
@@ -10,12 +9,12 @@ public class Batalha
     }
     
     public void iniciar(){
-        if(saint1.getValCatArmadura()>saint2.getValCatArmadura()){
-            saint2.perderVida(10.0f);
-        } else if (saint1.getValCatArmadura()<saint2.getValCatArmadura()) {
-            saint1.perderVida(10.0f);
+        final double dano = 10;
+        
+        if(saint1.getValCatArmadura()>=saint2.getValCatArmadura()){
+            saint2.perderVida(dano);
         } else {
-            saint2.perderVida(10.0f);
+            saint1.perderVida(dano);
         }
     }
 }
