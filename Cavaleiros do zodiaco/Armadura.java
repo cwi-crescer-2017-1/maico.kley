@@ -6,4 +6,8 @@ public class Armadura {
         this.constelacao = constelacao; 
         this.categoria = categoria;
     }
+    
+    public int getCatArmadura(){
+        return this.categoria.getValor();
+    }
 }
