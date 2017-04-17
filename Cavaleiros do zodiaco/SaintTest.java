@@ -51,4 +51,44 @@ public class SaintTest
         Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
         assertEquals(100., shun.getVida(), 0.01);
     }
+    
+    @Test
+    public void perder10DeVida(){
+        //Arrange
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        //act
+        shun.perderVida(10);
+        //assert
+        assertEquals(90, shun.getVida(), 0.01);
+    }
+    
+    @Test
+    public void perder100DeVida(){
+        //Arrange
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        //act
+        shun.perderVida(100);
+        //assert
+        assertEquals(0, shun.getVida(), 0.01);
+    }
+    
+    @Test
+    public void perder1000DeVida(){
+        //Arrange
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        //act
+        shun.perderVida(1000);
+        //assert
+        assertEquals(-900, shun.getVida(), 0.01);
+    }
+    
+    @Test
+    public void perderMenos1000DeVida(){
+        //Arrange
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        //act
+        shun.perderVida(-1000);
+        //assert
+        assertEquals(1100, shun.getVida(), 0.01);
+    }
 }
