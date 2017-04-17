@@ -91,4 +91,10 @@ public class SaintTest
         //assert
         assertEquals(1100, shun.getVida(), 0.01);
     }
+
+	@Test
+	public void aoCriarSaintNasceCom5SentidosDespertados(){
+		Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+		assertEquals(5, shun.getQtsSentidosDespertados());
+	}
 }
