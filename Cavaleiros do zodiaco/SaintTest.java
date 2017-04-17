@@ -38,4 +38,17 @@ public class SaintTest
         Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
         assertEquals(Status.VIVO,shun.getStatus());
     }
+    
+    @Test
+    public void deveSerPossivelTrocarGenero(){
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        shun.setGenero(Genero.MASCULINO);
+        assertEquals(Genero.MASCULINO, shun.getGenero());
+    }
+    
+    @Test
+    public void aoCriarSaintVidaECem(){
+        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        assertEquals(100., shun.getVida(), 0.01);
+    }
 }
