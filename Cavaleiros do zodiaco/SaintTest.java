@@ -12,8 +12,9 @@ public class SaintTest
    public void vestirArmaduraDeixaArmaduraVestida()throws Exception {
        //AAA
        // 1. Arrange - Montagem dos dados do teste
-       Armadura libra = new Armadura("Libra", Categoria.OURO);
-       Saint dohko = new Saint("Dohko", libra);
+       Constelacao libra = new Constelacao("Libra");       
+       Armadura libraA = new Armadura(libra, Categoria.OURO);
+       Saint dohko = new Saint("Dohko", libraA);
        // 2. Act - Invocar a ação a ser testada
        dohko.vestirArmadura();
        // 3. Assert - Verificação dos resultados do teste
@@ -23,39 +24,45 @@ public class SaintTest
     
     @Test
     public void naoVestirArmaduraDeixaArmaduraNaoVestida()throws Exception {
-        Saint hyoga = new Saint("Hyoga", new Armadura("Cisne", Categoria.BRONZE));
+        Constelacao cisne = new Constelacao("Cisne");
+        Saint hyoga = new Saint("Hyoga", new Armadura(cisne, Categoria.BRONZE));
         assertEquals(false, hyoga.getArmaduraVestida());
     }
     
     @Test
     public void aoCriarSaintGeneroENaoInformado()throws Exception{
-        Saint shaka = new Saint("Shaka", new Armadura("Virgem", Categoria.OURO));
+        Constelacao virgem = new Constelacao("Virgem");
+        Saint shaka = new Saint("Shaka", new Armadura(virgem, Categoria.OURO));
         assertEquals(Genero.NAO_INFORMADO,shaka.getGenero());
     }
     
     @Test
     public void aoCriarSaintStatusEVivo()throws Exception{
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         assertEquals(Status.VIVO,shun.getStatus());
     }
     
     @Test
     public void deveSerPossivelTrocarGenero()throws Exception{
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         shun.setGenero(Genero.MASCULINO);
         assertEquals(Genero.MASCULINO, shun.getGenero());
     }
     
     @Test
     public void aoCriarSaintVidaECem()throws Exception{
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         assertEquals(100., shun.getVida(), 0.01);
     }
     
     @Test
     public void perder10DeVida()throws Exception{
         //Arrange
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         //act
         shun.perderVida(10);
         //assert
@@ -65,7 +72,8 @@ public class SaintTest
     @Test
     public void perder100DeVida()throws Exception{
         //Arrange
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         //act
         shun.perderVida(100);
         //assert
@@ -76,7 +84,8 @@ public class SaintTest
     @Test
     public void perder1000DeVida()throws Exception{
         //Arrange
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         //act
         shun.perderVida(1000);
         //assert
@@ -87,31 +96,36 @@ public class SaintTest
     @Test (expected=Exception.class)
     public void perderMenos1000DeVida()throws Exception{
         //Arrange
-        Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
+        Constelacao andromeda = new Constelacao("Andromeda");
+        Saint shun = new Saint("Shun", new Armadura(andromeda, Categoria.BRONZE));
         //act
         shun.perderVida(-1000);        
     }
 
 	@Test
     public void criarSaintNasceCom5SentidosDespertados() throws Exception {
-        BronzeSaint seiya = new BronzeSaint("Seiya", new Armadura("Pégaso", Categoria.BRONZE));
+        Constelacao pegaso = new Constelacao("Pégaso");
+        BronzeSaint seiya = new BronzeSaint("Seiya", new Armadura(pegaso, Categoria.BRONZE));
         assertEquals(5, seiya.getQtdSentidosDespertados());
     }
 
     @Test
     public void criarSaintPrataNasceCom6SentidosDespertados() throws Exception {
-        SilverSaint marin = new SilverSaint("Marin", new Armadura("Águia", Categoria.PRATA));
+        Constelacao aguia = new Constelacao("Águia");
+        SilverSaint marin = new SilverSaint("Marin", new Armadura(aguia, Categoria.PRATA));
         assertEquals(6, marin.getQtdSentidosDespertados());
     }
     
     @Test
     public void criarSaintOuroNasceCom7SentidosDespertados() throws Exception {
-        GoldSaint afrodite = new GoldSaint("Afrodite", new Armadura("Peixes", Categoria.OURO));
+        Constelacao peixes = new Constelacao("Peixes");
+        GoldSaint afrodite = new GoldSaint("Afrodite", new Armadura(peixes, Categoria.OURO));
         assertEquals(7, afrodite.getQtdSentidosDespertados());
     }
     
     @Test(expected=Exception.class)
     public void constelacaoInvalidaDeOuroDeveLancarErro() throws Exception {
-        new GoldSaint("Bernardo", new Armadura("Café", Categoria.OURO));
+        Constelacao cafe = new Constelacao("Café");
+        new GoldSaint("Bernardo", new Armadura(cafe, Categoria.OURO));
     }
 }
