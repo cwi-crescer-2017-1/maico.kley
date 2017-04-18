@@ -70,6 +70,7 @@ public class SaintTest
         shun.perderVida(100);
         //assert
         assertEquals(0, shun.getVida(), 0.01);
+        assertEquals(Status.MORTO, shun.getStatus());
     }
     
     @Test
@@ -79,17 +80,16 @@ public class SaintTest
         //act
         shun.perderVida(1000);
         //assert
-        assertEquals(-900, shun.getVida(), 0.01);
+        assertEquals(0, shun.getVida(), 0.01);
+        assertEquals(Status.MORTO, shun.getStatus());
     }
     
-    @Test
+    @Test (expected=Exception.class)
     public void perderMenos1000DeVida()throws Exception{
         //Arrange
         Saint shun = new Saint("Shun", new Armadura("Andromeda", Categoria.BRONZE));
         //act
-        shun.perderVida(-1000);
-        //assert
-        assertEquals(1100, shun.getVida(), 0.01);
+        shun.perderVida(-1000);        
     }
 
 	@Test

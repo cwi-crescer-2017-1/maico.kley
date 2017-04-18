@@ -32,8 +32,16 @@ public class Saint {
         return this.status;
     }
            
-    public void perderVida(double vidaPerdida){
-        this.vida-=vidaPerdida;
+    public void perderVida(double vidaPerdida)throws Exception{
+        if(vidaPerdida<0){
+            throw new Exception("Dano inválido");
+        } else if(this.vida>0){
+            this.vida-=vidaPerdida;
+            if(this.vida<=0){
+                this.status=Status.MORTO;
+                this.vida=0;
+            }
+        }
     }
     
     public Armadura getArmadura(){
