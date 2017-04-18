@@ -9,12 +9,14 @@ public class Batalha
     }
     
     public void iniciar(){
+        int valor1 = this.saint1.getArmadura().getCategoria().getValor();
+        int valor2 = this.saint2.getArmadura().getCategoria().getValor();
         final double dano = 10;
-        
-        if(saint1.getValCatArmadura()>=saint2.getValCatArmadura()){
-            saint2.perderVida(dano);
+
+        if (valor1 >= valor2) {
+            this.saint2.perderVida(dano);
         } else {
-            saint1.perderVida(dano);
+            this.saint1.perderVida(dano);
         }
     }
 }
