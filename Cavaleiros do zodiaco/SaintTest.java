@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import java.security.InvalidParameterException;
 
 public class SaintTest
 {
@@ -93,7 +93,7 @@ public class SaintTest
         assertEquals(Status.MORTO, shun.getStatus());
     }
     
-    @Test (expected=Exception.class)
+    @Test (expected=InvalidParameterException.class)
     public void perderMenos1000DeVida()throws Exception{
         //Arrange
         Constelacao andromeda = new Constelacao("Andromeda");
