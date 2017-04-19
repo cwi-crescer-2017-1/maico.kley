@@ -133,11 +133,8 @@ public class SaintTest
     public void aprenderUmGolpe() throws Exception {
         Saint saga = new Saint("Saga", new Armadura(new Constelacao("Gêmeos"), Categoria.OURO));
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
-        saga.aprenderGolpe(new Golpe("Outra dimensão", 10));
-        Golpe[] golpes = saga.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertNull(golpes[1]);
-        assertNull(golpes[2]);
+        saga.aprenderGolpe(new Golpe("Outra dimensão", 10));        
+        assertEquals(outraDimensao, saga.getGolpes().get(0));        
         // TODO: assert null
     }
 
@@ -147,11 +144,9 @@ public class SaintTest
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
         Golpe explosaoGalatica = new Golpe("Explosão Galáctica", 11);
         saga.aprenderGolpe(outraDimensao);
-        saga.aprenderGolpe(explosaoGalatica);
-        Golpe[] golpes = saga.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertEquals(explosaoGalatica, golpes[1]);
-        assertNull(golpes[2]);
+        saga.aprenderGolpe(explosaoGalatica);        
+        assertEquals(outraDimensao, saga.getGolpes().get(0));
+        assertEquals(explosaoGalatica, saga.getGolpes().get(1));        
     }
 
     @Test
@@ -162,14 +157,13 @@ public class SaintTest
         Golpe sataImperial = new Golpe("Satã Imperial", 42);
         saga.aprenderGolpe(outraDimensao);
         saga.aprenderGolpe(explosaoGalatica);
-        saga.aprenderGolpe(sataImperial);
-        Golpe[] golpes = saga.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertEquals(explosaoGalatica, golpes[1]);
-        assertEquals(sataImperial, golpes[2]);
+        saga.aprenderGolpe(sataImperial);        
+        assertEquals(outraDimensao, saga.getGolpes().get(0));
+        assertEquals(explosaoGalatica, saga.getGolpes().get(1));
+        assertEquals(sataImperial,saga.getGolpes().get(2));
     }
 
-    @Test(expected=ArrayIndexOutOfBoundsException.class)
+    @Test
     public void aprenderQuatroGolpesLancaErro() throws Exception {
         Saint saga = new Saint("Saga", new Armadura(new Constelacao("Gêmeos"), Categoria.OURO));
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);

@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -12,12 +12,8 @@ public class ConstelacaoTest
     public void adicionarUmGolpe() {
         Constelacao gemeos = new Constelacao("Gêmeos");
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
-        gemeos.adicionarGolpe(new Golpe("Outra dimensão", 10));
-        Golpe[] golpes = gemeos.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertNull(golpes[1]);
-        assertNull(golpes[2]);
-        // TODO: assert null
+        gemeos.adicionarGolpe(new Golpe("Outra dimensão", 10));        
+        assertEquals(outraDimensao, gemeos.getGolpes().get(0));        
     }
 
     @Test
@@ -26,11 +22,9 @@ public class ConstelacaoTest
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
         Golpe explosaoGalatica = new Golpe("Explosão Galáctica", 11);
         gemeos.adicionarGolpe(outraDimensao);
-        gemeos.adicionarGolpe(explosaoGalatica);
-        Golpe[] golpes = gemeos.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertEquals(explosaoGalatica, golpes[1]);
-        assertNull(golpes[2]);
+        gemeos.adicionarGolpe(explosaoGalatica);        
+        assertEquals(outraDimensao, gemeos.getGolpes().get(0));
+        assertEquals(explosaoGalatica, gemeos.getGolpes().get(1));        
     }
 
     @Test
@@ -41,14 +35,13 @@ public class ConstelacaoTest
         Golpe sataImperial = new Golpe("Satã Imperial", 60);
         gemeos.adicionarGolpe(outraDimensao);
         gemeos.adicionarGolpe(explosaoGalatica);
-        gemeos.adicionarGolpe(sataImperial);
-        Golpe[] golpes = gemeos.getGolpes();
-        assertEquals(outraDimensao, golpes[0]);
-        assertEquals(explosaoGalatica, golpes[1]);
-        assertEquals(sataImperial, golpes[2]);
+        gemeos.adicionarGolpe(sataImperial);        
+        assertEquals(outraDimensao, gemeos.getGolpes().get(0));
+        assertEquals(explosaoGalatica, gemeos.getGolpes().get(1));
+        assertEquals(sataImperial, gemeos.getGolpes().get(2));
     }
 
-    @Test(expected=ArrayIndexOutOfBoundsException.class)
+    @Test
     public void adicionarQuatroGolpes() {
         Constelacao gemeos = new Constelacao("Gêmeos");
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
