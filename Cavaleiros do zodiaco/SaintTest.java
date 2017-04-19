@@ -164,7 +164,7 @@ public class SaintTest
     }
 
     @Test
-    public void aprenderQuatroGolpesLancaErro() throws Exception {
+    public void aprenderQuatroGolpes() throws Exception {
         Saint saga = new Saint("Saga", new Armadura(new Constelacao("Gêmeos"), Categoria.OURO));
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
         Golpe explosaoGalatica = new Golpe("Explosão Galáctica", 11);

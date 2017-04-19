@@ -37,15 +37,13 @@ public class Saint {
            
     public void perderVida(double dano){
         if (dano < 0) {
-            throw new InvalidParameterException("dano");
-            //throw new IllegalArgumentException("dano");
+            throw new InvalidParameterException("dano");            
         }
 
         if (vida - dano < 1) {
             this.status = Status.MORTO;
             this.vida = 0;
-        } else {
-            //this.vida = this.vida - dano;
+        } else {           
             this.vida -= dano;
         }
     }
@@ -79,5 +77,9 @@ public class Saint {
         contadorGolpes = getConstelacao().getGolpes();
         Golpe golpeAtual = contadorGolpes.get(acumuladorProximoGolpe ++ % contadorGolpes.size());        
         return golpeAtual;
+    }
+    
+    public String getNome(){
+        return this.nome;
     }
 }
