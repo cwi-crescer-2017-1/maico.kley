@@ -11,7 +11,7 @@ public class ListaSaints
        return this.listaSaints.get(i);
     }
     
-   public ArrayList todos(){
+   public ArrayList<Saint> todos(){
        return this.listaSaints;
     }
        
@@ -19,23 +19,38 @@ public class ListaSaints
        this.listaSaints.remove(saint);
     }
     
-   public Saint buscaPorNome(String nome){       
-       for(int i=0;i<listaSaints.size();i++){
+   public Saint buscarPorNome(String nome){       
+       /*for(int i=0;i<listaSaints.size();i++){
            if(nome.equals(listaSaints)){
                return this.listaSaints.get(i);               
+            }
+        }
+        return null;*/
+        for(Saint saint : this.listaSaints){
+            if (saint.getNome().equals(nome)){
+                return saint;
             }
         }
         return null;
     }
     
-   public ArrayList buscaPorCategoria(Categoria categoria){
-       ArrayList<Saint> saintsCategoriaDesejada = new ArrayList<>();
+   public ArrayList<Saint> buscaPorCategoria(Categoria categoria){
+       /*ArrayList<Saint> saintsCategoriaDesejada = new ArrayList<>();
        for(int i=0;i<listaSaints.size();i++){
            if(categoria.equals(listaSaints)){
                saintsCategoriaDesejada.add(listaSaints.get(i));               
             }
         }
         return saintsCategoriaDesejada;
+        //fazer refactor*/
+        ArrayList<Saint> subLista = new ArrayList<Saint>();
+        //
+        for (Saint saint : this.listaSaints) {
+            if (saint.getArmadura().getCategoria().equals(categoria)) {
+                subLista.add(saint);
+            }
+        }
+        return subLista;
     }
     
    public ArrayList buscaPorStatus(Status status){
@@ -79,7 +94,7 @@ public class ListaSaints
                if(listaSaints.get(i).getVida()<listaSaints.get(j).getVida()){
                    ordenar = listaSaints.get(i);
                    listaSaints.add(listaSaints.indexOf(ordenar),listaSaints.get(j));
-                   listaSaints.add(listaSaints.indexOf(listaSaints.get(j)),ordenar);
+                   listaSaints.add(ordenar);
                 }
             }
         }

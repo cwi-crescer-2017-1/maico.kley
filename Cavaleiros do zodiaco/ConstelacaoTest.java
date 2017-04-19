@@ -13,7 +13,7 @@ public class ConstelacaoTest
         Constelacao gemeos = new Constelacao("Gêmeos");
         Golpe outraDimensao = new Golpe("Outra dimensão", 10);
         gemeos.adicionarGolpe(new Golpe("Outra dimensão", 10));        
-        assertEquals(outraDimensao, gemeos.getGolpes().get(0));        
+        assertEquals(outraDimensao, gemeos.getGolpes().get(0));         
     }
 
     @Test
@@ -50,6 +50,6 @@ public class ConstelacaoTest
         gemeos.adicionarGolpe(outraDimensao);
         gemeos.adicionarGolpe(explosaoGalatica);
         gemeos.adicionarGolpe(sataImperial);
-        gemeos.adicionarGolpe(new Golpe("Cólera do café intenso", 80));
+        gemeos.adicionarGolpe(new Golpe("Cólera do café intenso", 80));        
     }
 }
