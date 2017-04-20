@@ -304,6 +304,6 @@ public class ListaSaintsTest
         june.perderVida(15.5);
         lista.adicionar(june);
         String csv = lista.getCSV(june);
-        assertEquals(csv, "June,84.5,Camaleão,BRONZE,VIVO,FEMININO,false");
+        assertEquals(csv, "June,84.5,Camaleão,BRONZE,VIVO,FEMININO,false\n");
     }
 }

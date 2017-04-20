@@ -137,8 +137,8 @@ public class ListaSaints
        String saintsCSV = "";
        for(int i = 0; i<this.listaSaints.size();i++){
             saint = this.listaSaints.get(i);
-            saintsCSV = (saint.getNome()+","+saint.getVida()+","+saint.getConstelacao()+","+saint.getArmadura().getCategoria()+","+saint.getStatus()
-            +","+saint.getGenero()+","+saint.getArmaduraVestida()+System.getProperty("line.separator"));
+            saintsCSV = (saint.getNome()+","+saint.getVida()+","+saint.getConstelacao().getNome()+","+saint.getArmadura().getCategoria()+","+saint.getStatus()
+            +","+saint.getGenero()+","+saint.getArmaduraVestida()+"\n");
        }
        retorno = retorno + saintsCSV;
        return retorno;
