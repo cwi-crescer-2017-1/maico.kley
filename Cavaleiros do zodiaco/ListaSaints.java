@@ -97,4 +97,50 @@ public class ListaSaints
             }
         } while (posicoesSendoTrocadas); 
     }
+    
+   public void ordenar(TipoOrdenacao ordenacao){ 
+       if(ordenacao.equals(TipoOrdenacao.ASCENDENTE)){
+           boolean posicoesSendoTrocadas;
+        do {
+            posicoesSendoTrocadas = false;
+            for (int i = 0; i < this.listaSaints.size() - 1; i++) {
+                Saint atual = this.listaSaints.get(i);
+                Saint proximo = this.listaSaints.get(i + 1);
+                boolean precisaTrocar = atual.getVida() > proximo.getVida();
+                if (precisaTrocar) {
+                    this.listaSaints.set(i, proximo);
+                    this.listaSaints.set(i + 1, atual);
+                    posicoesSendoTrocadas = true;
+                }
+            }
+        } while (posicoesSendoTrocadas);
+       } else if (ordenacao.equals(TipoOrdenacao.DESCENDENTE)){
+            boolean posicoesSendoTrocadas;
+        do {
+            posicoesSendoTrocadas = false;
+            for (int i = 0; i < this.listaSaints.size() - 1; i++) {
+                Saint atual = this.listaSaints.get(i);
+                Saint proximo = this.listaSaints.get(i + 1);
+                boolean precisaTrocar = atual.getVida() < proximo.getVida();
+                if (precisaTrocar) {
+                    this.listaSaints.set(i, proximo);
+                    this.listaSaints.set(i + 1, atual);
+                    posicoesSendoTrocadas = true;
+                }
+            }
+        } while (posicoesSendoTrocadas);
+       }        
+    }
+    
+   public String getCSV(Saint saint){
+       String retorno = "";
+       String saintsCSV = "";
+       for(int i = 0; i<this.listaSaints.size();i++){
+            saint = this.listaSaints.get(i);
+            saintsCSV = (saint.getNome()+","+saint.getVida()+","+saint.getConstelacao()+","+saint.getArmadura().getCategoria()+","+saint.getStatus()
+            +","+saint.getGenero()+","+saint.getArmaduraVestida()+System.getProperty("line.separator"));
+       }
+       retorno = retorno + saintsCSV;
+       return retorno;
+   }
 }
