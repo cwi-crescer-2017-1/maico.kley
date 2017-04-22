@@ -6,11 +6,9 @@ import org.junit.Test;
 public class BatalhaTest
 {
     @Test
-    public void batalhaPrimeiroCategoriaMaisAlta()throws Exception{
-        Constelacao virgem = new Constelacao("Virgem");
-        Constelacao lira = new Constelacao("Lira");
-        Saint saint1 = new Saint("Shaka", new Armadura(virgem, Categoria.OURO));
-        Saint saint2 = new Saint("Orfeu", new Armadura(lira, Categoria.PRATA));
+    public void batalhaPrimeiroCategoriaMaisAlta()throws Exception{        
+        Saint saint1 = new GoldSaint("Shaka", "Virgem");
+        Saint saint2 = new SilverSaint("Orfeu", "Lira");
         
         Batalha batalha = new Batalha(saint1, saint2);
         
@@ -21,12 +19,9 @@ public class BatalhaTest
     }
     
     @Test
-    public void batalhaSegundoCategoriaMaisAlta()throws Exception{
-        Constelacao lira = new Constelacao("Lira");
-        Constelacao virgem = new Constelacao("Virgem");
-        Saint saint1 = new Saint("Orfeu", new Armadura(lira, Categoria.PRATA));
-        Saint saint2 = new Saint("Shaka", new Armadura(virgem, Categoria.OURO));
-        
+    public void batalhaSegundoCategoriaMaisAlta()throws Exception{        
+        Saint saint1 = new SilverSaint("Orfeu", "Lira");
+        Saint saint2 = new GoldSaint("Shaka", "Virgem");        
         
         Batalha batalha = new Batalha(saint1, saint2);
         
@@ -37,12 +32,9 @@ public class BatalhaTest
     }
     
     @Test
-    public void batalhaMesmaCategoria()throws Exception{
-        Constelacao dragao = new Constelacao("Dragão");
-        Constelacao pegasus = new Constelacao("Pegasus");
-        Saint saint1 = new Saint("Shiryu", new Armadura(dragao, Categoria.BRONZE));
-        Saint saint2 = new Saint("Seiya", new Armadura(pegasus, Categoria.BRONZE));
-        
+    public void batalhaMesmaCategoria()throws Exception{        
+        Saint saint1 = new BronzeSaint("Shiryu", "Dragão");
+        Saint saint2 = new BronzeSaint("Seiya", "Pegasus");        
         
         Batalha batalha = new Batalha(saint1, saint2);
         

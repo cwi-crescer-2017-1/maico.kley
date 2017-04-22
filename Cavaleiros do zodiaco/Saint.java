@@ -1,12 +1,12 @@
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
-public class Saint {    
+public abstract class Saint {    
     private String nome; 
     private Armadura armadura;
     private boolean armaduraVestida;
     private Genero genero = Genero.NAO_INFORMADO;
     private Status status = Status.VIVO;
-    private double vida = 100.0f;
+    private double vida = 100.0;
     protected int qtdSentidosDespertados;
     private int acumuladorProximoGolpe = 0;
     
