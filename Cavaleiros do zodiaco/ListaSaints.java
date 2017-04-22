@@ -118,15 +118,21 @@ public class ListaSaints
         } while (posicoesSendoTrocadas); 
     }
     
-   public String getCSV(Saint saint){
-       String retorno = "";
-       String saintsCSV = "";
-       for(int i = 0; i<this.listaSaints.size();i++){
-            saint = this.listaSaints.get(i);
-            saintsCSV = (saint.getNome()+","+saint.getVida()+","+saint.getConstelacao().getNome()+","+saint.getArmadura().getCategoria()+","+saint.getStatus()
-            +","+saint.getGenero()+","+saint.getArmaduraVestida()+"\n");
-            retorno = retorno + saintsCSV;
-       }       
-       return retorno;
+   public String getCSV(){
+       if (this.listaSaints.isEmpty()) {
+            return "";
+        }
+
+        String separador = System.getProperty("line.separator");
+        StringBuilder builder = new StringBuilder(512);
+
+        builder.append(this.listaSaints.get(0).getCSV());
+        for (int i = 1; i < this.listaSaints.size(); i++) {
+            Saint saint = this.listaSaints.get(i);            
+            builder.append(separador);
+            builder.append(saint.getCSV());
+        }
+
+        return builder.toString();
    }
 }
