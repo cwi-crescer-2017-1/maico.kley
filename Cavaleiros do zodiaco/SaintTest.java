@@ -241,4 +241,14 @@ public class SaintTest
     public void aoCriarSaintDeOuroSemConstelaçãoDarErro() throws Exception {
         Saint dohko = new GoldSaint("Dohko", "");
     }
+    
+    @Test
+    public void getProximoMovimentoDois() throws Exception{
+        Saint dohko = new GoldSaint("Dohko", "Libra");
+        Saint orfeu = new SilverSaint("Orfeu", "Lira");       
+        dohko.adicionarMovimento (new VestirArmadura (dohko));
+        dohko.adicionarMovimento (new Golpear (dohko, orfeu));    
+        assertEquals(true, dohko.getProximoMovimento() instanceof VestirArmadura);
+        assertEquals(true, dohko.getProximoMovimento() instanceof Golpear);        
+    }
 }
