@@ -135,4 +135,50 @@ public class ListaSaints
 
         return builder.toString();
    }
+   
+   //verificar
+       public ListaSaints unir (ListaSaints lista) {
+        ArrayList<Saint> listaAtual = this.listaSaints;
+        ArrayList<Saint> listaParaAdicionar = lista.todos();
+        ListaSaints resultado = new ListaSaints();
+        for (Saint saint : listaAtual) {
+            resultado.adicionar (saint);
+        }
+        for (Saint saint : listaParaAdicionar) {
+            resultado.adicionar (saint);
+        }
+        return resultado;
+    }
+
+    public ListaSaints diff (ListaSaints lista) {
+        ListaSaints resultado = new ListaSaints();
+        ArrayList<Saint> lista1 = this.listaSaints;
+        ArrayList<Saint> lista2 = lista.todos();
+        for (Saint saint1 : lista1) {  
+            boolean duplicado = false;
+            for (Saint saint2 : lista2) {
+                if (saint1.equals(saint2)) {
+                    duplicado = true;
+                    break;
+                }
+            }
+            if (!duplicado) { resultado.adicionar (saint1);}
+        }
+        return resultado;
+    }
+
+    public ListaSaints intersec (ListaSaints lista) {
+        ListaSaints resultado = new ListaSaints();
+        ArrayList<Saint> lista1 = this.listaSaints;
+        ArrayList<Saint> lista2 = lista.todos();
+        for (Saint saint1 : lista1) {  
+            for (Saint saint2 : lista2) {
+                if (saint1.equals(saint2)) {
+                    resultado.adicionar (saint1);
+                    break;
+                }
+            }
+        }
+        return resultado;
+    }
 }

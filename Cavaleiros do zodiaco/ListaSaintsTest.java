@@ -437,4 +437,142 @@ public class ListaSaintsTest
         String esperado = "June,84.5,Camaleão,BRONZE,VIVO,FEMININO,false" + System.getProperty("line.separator") +"Dohko,10.0,Libra,OURO,VIVO,NAO_INFORMADO,true";
         assertEquals(esperado, lista.getCSV());
     }
+    
+    //verificar
+    @Test
+    public void unirDuasListas () throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        lista2.adicionar (shun);
+        lista2.adicionar (aldebaran);
+        ListaSaints resultado = lista1.unir(lista2);
+        assertEquals(resultado.get(0), seiya);
+        assertEquals(resultado.get(1), milo);
+        assertEquals(resultado.get(2), shun);
+        assertEquals(resultado.get(3), aldebaran);
+    }
+    
+    @Test
+    public void unirDuasListasLista1Vazia() throws Exception {
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista2.adicionar (shun);
+        lista2.adicionar (aldebaran);
+        ListaSaints resultado = lista1.unir(lista2);
+        assertEquals(resultado.get(0), shun);
+        assertEquals(resultado.get(1), aldebaran);
+    }
+    
+    @Test
+    public void unirDuasListasLista2Vazia() throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        ListaSaints resultado = lista1.unir(lista2);
+        assertEquals(resultado.get(0), seiya);
+        assertEquals(resultado.get(1), milo);
+    }
+    
+    @Test
+    public void diffDuasListas () throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        Saint mu = new GoldSaint ("Mu", "Áries");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        lista1.adicionar (shun);
+        lista1.adicionar (aldebaran);
+        lista2.adicionar (seiya);
+        lista2.adicionar (mu);
+        lista2.adicionar (milo);
+        ListaSaints resultado = lista1.diff(lista2);
+        assertEquals(shun, resultado.get(0));
+        assertEquals(aldebaran, resultado.get(1));
+    }
+    
+    @Test
+    public void diffDuasListasLista1Vazia() throws Exception {
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista2.adicionar (shun);
+        lista2.adicionar (aldebaran);
+        ListaSaints resultado = lista1.diff(lista2);
+        assertEquals(resultado.todos().size(),0);
+    }
+    
+    @Test
+    public void diffDuasListasLista2Vazia() throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        ListaSaints resultado = lista1.diff(lista2);
+        assertEquals(resultado.get(0), seiya);
+        assertEquals(resultado.get(1), milo);
+    }
+    
+    @Test
+    public void intersecDuasListas () throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        Saint mu = new GoldSaint ("Mu", "Áries");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        lista1.adicionar (shun);
+        lista2.adicionar (mu);
+        lista2.adicionar (aldebaran);
+        lista2.adicionar (seiya);
+        lista2.adicionar (mu);
+        lista2.adicionar (milo);
+        ListaSaints resultado = lista1.intersec(lista2);
+        assertEquals(seiya, resultado.get(0));
+        assertEquals(milo, resultado.get(1));
+    }
+    
+    @Test
+    public void intersecDuasListasLista1Vazia() throws Exception {
+        Saint shun = new BronzeSaint ("Shun", "Andrômeda");
+        Saint aldebaran = new GoldSaint ("Aldebaran", "Touro");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista2.adicionar (shun);
+        lista2.adicionar (aldebaran);
+        ListaSaints resultado = lista1.intersec(lista2);
+        assertEquals(resultado.todos().size(), 0);
+    }
+    
+    @Test
+    public void intersecDuasListasLista2Vazia() throws Exception {
+        Saint seiya = new BronzeSaint ("Seiya", "Pégaso");
+        Saint milo = new GoldSaint ("Milo", "Escorpião");
+        ListaSaints lista1 = new ListaSaints();
+        ListaSaints lista2 = new ListaSaints();
+        lista1.adicionar (seiya);
+        lista1.adicionar (milo);
+        ListaSaints resultado = lista1.intersec(lista2);
+        assertEquals(resultado.todos().size(), 0);
+    }
 }
