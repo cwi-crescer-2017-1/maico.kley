@@ -10,13 +10,12 @@ public class Batalha
     
     public void iniciar()throws Exception{
         int valor1 = this.saint1.getArmadura().getCategoria().getValor();
-        int valor2 = this.saint2.getArmadura().getCategoria().getValor();
-        final double dano = 10;
+        int valor2 = this.saint2.getArmadura().getCategoria().getValor();        
 
         if (valor1 >= valor2){
-            this.saint2.perderVida(dano);
+            this.saint1.getProximoMovimento();
         } else {
-            this.saint1.perderVida(dano);
+            this.saint2.getProximoMovimento();
         }
     }
 }

@@ -103,8 +103,11 @@ public abstract class Saint {
     }
     
     public Movimento getProximoMovimento() {                 
-        Movimento movimentoAtual = movimentos.get
-        (acumuladorProximoMovimento ++ % movimentos.size());
+        Movimento movimentoAtual = movimentos.get(acumuladorProximoMovimento);
+        acumuladorProximoMovimento++;
+        if (acumuladorProximoMovimento == this.movimentos.size()) {
+            acumuladorProximoMovimento = 0;
+        }
         return movimentoAtual;        
     }
 }
