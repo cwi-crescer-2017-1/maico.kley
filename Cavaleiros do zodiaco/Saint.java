@@ -110,4 +110,8 @@ public abstract class Saint {
         }
         return movimentoAtual;        
     }
+
+	public void golpear(Saint golpeado) {
+        this.adicionarMovimento(new Golpear(this, golpeado));
+    }
 }

@@ -242,7 +242,7 @@ public class SaintTest
         Saint dohko = new GoldSaint("Dohko", "");
     }
     
-    @Test(expected=ArithmeticException.class)
+    @Test (expected=IndexOutOfBoundsException.class)
     public void getProximoMovimentoComListaVazia() throws Exception {
         Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
         Movimento movimento = hyoga.getProximoMovimento();
@@ -264,4 +264,14 @@ public class SaintTest
         hyoga.getProximoMovimento();
         assertEquals(vestirArmadura, hyoga.getProximoMovimento());
     }
+
+	@Test
+    public void golpearDeveAdicionarMovimentoGolpear() throws Exception {
+        Saint saga = new GoldSaint("Saga", "Gêmeos");
+        saga.aprenderGolpe(new Golpe("Outra dimensão", 10));
+        Saint seiya = new BronzeSaint("Seiya", "Pégaso");
+        saga.golpear(seiya);
+        Golpear golpear = new Golpear(saga, seiya);
+        assertEquals(golpear, saga.getProximoMovimento());
+    }    
 }
