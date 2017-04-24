@@ -13,10 +13,10 @@ public class Golpear implements Movimento
         if(golpeador.getArmaduraVestida()){
             multiplicadorDano = golpeador.getArmadura().
             getCategoria().getValor() + 1;
-            golpeado.perderVida(golpeador.getProximoGolpe().getFatorDano() 
+            this.golpeado.perderVida(golpeador.getProximoGolpe().getFatorDano() 
             * multiplicadorDano);
         } else {
-            golpeado.perderVida(golpeador.getProximoGolpe().getFatorDano());
+            this.golpeado.perderVida(golpeador.getProximoGolpe().getFatorDano());
         }        
     }
 }
