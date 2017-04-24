@@ -242,13 +242,26 @@ public class SaintTest
         Saint dohko = new GoldSaint("Dohko", "");
     }
     
+    @Test(expected=ArithmeticException.class)
+    public void getProximoMovimentoComListaVazia() throws Exception {
+        Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
+        Movimento movimento = hyoga.getProximoMovimento();
+    }
+
     @Test
-    public void getProximoMovimentoDois() throws Exception{
-        Saint dohko = new GoldSaint("Dohko", "Libra");
-        Saint orfeu = new SilverSaint("Orfeu", "Lira");       
-        dohko.adicionarMovimento (new VestirArmadura (dohko));
-        dohko.adicionarMovimento (new Golpear (dohko, orfeu));    
-        assertEquals(true, dohko.getProximoMovimento() instanceof VestirArmadura);
-        assertEquals(true, dohko.getProximoMovimento() instanceof Golpear);        
+    public void getProximoMovimentoComUmMovimento() throws Exception {
+        Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
+        Movimento vestirArmadura = new VestirArmadura(hyoga);
+        hyoga.adicionarMovimento(vestirArmadura);
+        assertEquals(vestirArmadura, hyoga.getProximoMovimento());
+    }
+    
+    @Test
+    public void getProximoMovimentoDuasVezesComUmMovimento() throws Exception {
+        Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
+        Movimento vestirArmadura = new VestirArmadura(hyoga);
+        hyoga.adicionarMovimento(vestirArmadura);
+        hyoga.getProximoMovimento();
+        assertEquals(vestirArmadura, hyoga.getProximoMovimento());
     }
 }
