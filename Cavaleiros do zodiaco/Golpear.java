@@ -7,6 +7,7 @@ public class Golpear implements Movimento
         this.golpeador = golpeador;
         this.golpeado = golpeado;
     }
+    
     public void executar(){
         int multiplicadorDano;
         if(golpeador.getArmaduraVestida()){
@@ -16,7 +17,6 @@ public class Golpear implements Movimento
             * multiplicadorDano);
         } else {
             golpeado.perderVida(golpeador.getProximoGolpe().getFatorDano());
-        }
-        
+        }        
     }
 }

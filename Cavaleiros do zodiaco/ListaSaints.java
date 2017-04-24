@@ -42,6 +42,7 @@ public class ListaSaints
     }
     
    public ArrayList buscaPorStatus(Status status){
+       //exemplo lambda
        return (ArrayList<Saint>)this.listaSaints.stream()
             .filter(s -> s.getStatus().equals(status))
             .collect(Collectors.toList());

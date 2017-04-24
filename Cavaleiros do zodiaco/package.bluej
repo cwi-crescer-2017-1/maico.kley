@@ -59,15 +59,24 @@ dependency26.type=UsesDependency
 dependency27.from=ListaSaintsTest
 dependency27.to=Categoria
 dependency27.type=UsesDependency
+<<<<<<< Updated upstream
 dependency28.from=ListaSaintsTest
 dependency28.to=Status
 dependency28.type=UsesDependency
 dependency29.from=ListaSaintsTest
 dependency29.to=TipoOrdenacao
+=======
+dependency28.from=ListaSaints
+dependency28.to=Saint
+dependency28.type=UsesDependency
+dependency29.from=ListaSaints
+dependency29.to=Categoria
+>>>>>>> Stashed changes
 dependency29.type=UsesDependency
 dependency3.from=Armadura
 dependency3.to=Categoria
 dependency3.type=UsesDependency
+<<<<<<< Updated upstream
 dependency30.from=ListaSaintsTest
 dependency30.to=Genero
 dependency30.type=UsesDependency
@@ -97,6 +106,37 @@ dependency38.to=SilverSaint
 dependency38.type=UsesDependency
 dependency39.from=Saint
 dependency39.to=Armadura
+=======
+dependency30.from=ListaSaints
+dependency30.to=Status
+dependency30.type=UsesDependency
+dependency31.from=ListaSaints
+dependency31.to=TipoOrdenacao
+dependency31.type=UsesDependency
+dependency32.from=ListaSaintsTest
+dependency32.to=Saint
+dependency32.type=UsesDependency
+dependency33.from=ListaSaintsTest
+dependency33.to=Armadura
+dependency33.type=UsesDependency
+dependency34.from=ListaSaintsTest
+dependency34.to=Constelacao
+dependency34.type=UsesDependency
+dependency35.from=ListaSaintsTest
+dependency35.to=SilverSaint
+dependency35.type=UsesDependency
+dependency36.from=ListaSaintsTest
+dependency36.to=Categoria
+dependency36.type=UsesDependency
+dependency37.from=ListaSaintsTest
+dependency37.to=Status
+dependency37.type=UsesDependency
+dependency38.from=ListaSaintsTest
+dependency38.to=TipoOrdenacao
+dependency38.type=UsesDependency
+dependency39.from=ListaSaintsTest
+dependency39.to=Genero
+>>>>>>> Stashed changes
 dependency39.type=UsesDependency
 dependency4.from=Constelacao
 dependency4.to=Golpe
@@ -157,6 +197,7 @@ dependency9.to=Status
 dependency9.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
+<<<<<<< Updated upstream
 editor.fx.0.x=434
 editor.fx.0.y=27
 objectbench.height=177
@@ -165,6 +206,16 @@ package.divider.horizontal=0.549777117384844
 package.divider.vertical=0.7142857142857143
 package.editor.height=453
 package.editor.width=1248
+=======
+editor.fx.0.x=274
+editor.fx.0.y=19
+objectbench.height=110
+objectbench.width=825
+package.divider.horizontal=0.6181277860326895
+package.divider.vertical=0.8183229813664596
+package.editor.height=520
+package.editor.width=1225
+>>>>>>> Stashed changes
 package.editor.x=-8
 package.editor.y=-8
 package.frame.height=744
@@ -203,8 +254,14 @@ target11.showInterface=false
 target11.type=InterfaceTarget
 target11.typeParameters=
 target11.width=80
+<<<<<<< Updated upstream
 target11.x=690
 target11.y=330
+=======
+target11.x=650
+target11.y=60
+target12.association=ConstelacaoTest
+>>>>>>> Stashed changes
 target12.height=50
 target12.name=TipoOrdenacao
 target12.showInterface=false
@@ -227,9 +284,15 @@ target14.showInterface=false
 target14.type=UnitTestTargetJunit4
 target14.typeParameters=
 target14.width=80
+<<<<<<< Updated upstream
 target14.x=170
 target14.y=10
 target15.association=ConstelacaoTest
+=======
+target14.x=710
+target14.y=390
+target15.association=BatalhaTest
+>>>>>>> Stashed changes
 target15.height=50
 target15.name=Constelacao
 target15.showInterface=false
@@ -245,8 +308,14 @@ target16.showInterface=false
 target16.type=EnumTarget
 target16.typeParameters=
 target16.width=80
+<<<<<<< Updated upstream
 target16.x=200
 target16.y=200
+=======
+target16.x=690
+target16.y=270
+target17.association=SaintTest
+>>>>>>> Stashed changes
 target17.height=50
 target17.name=SilverSaint
 target17.showInterface=false
@@ -279,6 +348,7 @@ target2.showInterface=false
 target2.type=EnumTarget
 target2.typeParameters=
 target2.width=80
+<<<<<<< Updated upstream
 target2.x=70
 target2.y=110
 target20.height=50
@@ -298,6 +368,10 @@ target21.typeParameters=
 target21.width=80
 target21.x=30
 target21.y=220
+=======
+target2.x=680
+target2.y=30
+>>>>>>> Stashed changes
 target3.height=50
 target3.name=ConstelacaoTest
 target3.showInterface=false
@@ -321,16 +395,27 @@ target5.showInterface=false
 target5.type=ClassTarget
 target5.typeParameters=
 target5.width=80
+<<<<<<< Updated upstream
 target5.x=140
 target5.y=40
+=======
+target5.x=570
+target5.y=220
+target6.association=BatalhaTest
+>>>>>>> Stashed changes
 target6.height=50
 target6.name=Golpe
 target6.showInterface=false
 target6.type=ClassTarget
 target6.typeParameters=
 target6.width=80
+<<<<<<< Updated upstream
 target6.x=440
 target6.y=160
+=======
+target6.x=660
+target6.y=300
+>>>>>>> Stashed changes
 target7.association=BatalhaTest
 target7.height=50
 target7.name=Batalha
