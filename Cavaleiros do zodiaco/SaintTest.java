@@ -9,6 +9,11 @@ import java.security.InvalidParameterException;
 
 public class SaintTest
 {
+   @After
+   public void tearDown(){
+       System.gc();
+    }
+    
    @Test
    public void vestirArmaduraDeixaArmaduraVestida()throws Exception {
        //AAA
@@ -276,10 +281,15 @@ public class SaintTest
     }
     
     @Test
-    public void qtdSaintsCriados() throws Exception{   
-        int inicial = Saint.getQtdSaints();
+    public void qtdSaintsCriados() throws Exception{          
         Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
         Saint saga = new GoldSaint("Saga", "Gêmeos");
-        assertEquals(2, (Saint.getQtdSaints()-inicial));
+        assertEquals(2, Saint.getQtdSaints());
+    }
+    
+    @Test
+    public void criarUmSaintIncrementaId()throws Exception {
+        int idAntes = Saint.getAcumuladorQtdSaints();
+        assertEquals(idAntes + 1, new BronzeSaint("Seiya","Pégasos").getId());
     }
 }
