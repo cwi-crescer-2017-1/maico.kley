@@ -273,5 +273,13 @@ public class SaintTest
         saga.golpear(seiya);
         Golpear golpear = new Golpear(saga, seiya);
         assertEquals(golpear, saga.getProximoMovimento());
-    }    
+    }
+    
+    @Test
+    public void qtdSaintsCriados() throws Exception{   
+        int inicial = Saint.getQtdSaints();
+        Saint hyoga = new BronzeSaint("Hyoga", "Cisne");
+        Saint saga = new GoldSaint("Saga", "Gêmeos");
+        assertEquals(2, (Saint.getQtdSaints()-inicial));
+    }
 }
