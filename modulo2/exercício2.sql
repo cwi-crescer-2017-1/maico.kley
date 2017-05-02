@@ -52,6 +52,7 @@ ALTER TABLE Empregado ADD CONSTRAINT FK_Empregado_Departamento
 
 CREATE INDEX IX_Empregado_Departamento ON Empregado (IDDepartamento);
 
+<<<<<<< HEAD
 select idempregado, nomeempregado from Empregado
 order by DataAdmissao asc
 
@@ -72,3 +73,27 @@ select idempregado as [ID empregado],
 	   salario as [Salário Mensal]
 from empregado
 where (salario*13)<18500.00 or cargo='Atendente';
+=======
+select idempregado as ID,
+	   nomeempregado as Nome
+from Empregado
+order by DataAdmissao asc;
+
+select * from Empregado
+where Comissao is null
+order by Salario asc;
+
+select idempregado as [ID do Empregado],
+	   nomeempregado as Nome,
+	   salario*13 as [Salario Anual],
+	   comissao*12 as [Comissão Anual],
+	   (salario*13)+isnull(comissao+12,0) as [Renda Anual]
+from Empregado
+
+select idempregado as [ID do Empregado],
+	   nomeempregado as Nome,
+	   cargo as Cargo,
+	   salario as [Salário Mensal]
+from Empregado
+where cargo='Atendente' or (salario*13)<=18500;
+>>>>>>> master
