@@ -31,19 +31,21 @@ where DATEPART(month,DataPedido)=04
 
 --3
 --refazer
+select * from (
 select top(1) cid.UF,
 	   count(cli.IDCliente) as TotalClientes
 from cidade cid
 inner join cliente cli on cid.IDCidade=cli.IDCidade
 group by cid.UF
-order by TotalClientes asc
-
+order by TotalClientes asc ) as menosClientes
+union
+select * from (
 select top(1) cid.UF,
 	   count(cli.IDCliente) as TotalClientes
 from cidade cid
 inner join cliente cli on cid.IDCidade=cli.IDCidade
 group by cid.UF
-order by TotalClientes desc
+order by TotalClientes desc) as maisClientes
 
 --4
 insert into Produto values ('Galocha Maragato', CURRENT_TIMESTAMP, 35.67, 77.95, 'A')
@@ -58,10 +60,10 @@ order by PedidosDoItem asc
 
 --6
 select top(30) prod.nome as NomeProduto,
-	   ped.Quantidade*ped.PrecoUnitario as LucroProduto
+	   pedi.Quantidade * (prod.PrecoVenda  - prod.PrecoCusto) as LucroProduto
 from Produto prod
-left join PedidoItem ped on prod.IDProduto=ped.IDProduto
-group by prod.nome
+inner join PedidoItem pedi on prod.IDProduto=pedi.IDProduto
+inner join Pedido ped on ped.IDPedido=pedi.IDProduto
+where datepart(year, ped.Datapedido) = 2016 
 order by LucroProduto desc
-
 
