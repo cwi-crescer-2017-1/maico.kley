@@ -9,30 +9,31 @@ h1{
 h2{
   margin-left: 480px;
 }
-p {  
+p {
   border: 5px solid black;
   margin-left: 80px;
   margin-right:100px;
 }
 p.parag{
-  font-family: 'Lucida Sans';  
-  padding: 5px;  
+  font-family: 'Lucida Sans';
+  padding: 5px;
   text-align: justify;
   text-indent: 20px;
 }
 p.pg{
   margin-right: 100px;
-  margin-left:520px;
+  margin-left:530px;
+  padding: 5px;  
 }
 div{
   padding-bottom: 322px;
-  padding-top: 0px;    
-  border: 1px solid black;    
+  padding-top: 0px;
+  border: 1px solid black;
   background-color: lightgray;
-  margin-left: 300px;
-  margin-right: 300px;
+  width: 750px;
+  margin: 0px auto;
 }
-p:hover{  
+p:hover{
   background-color:black;
-  color: green; 
+  color: green;
 }

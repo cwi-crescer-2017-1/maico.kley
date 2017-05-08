@@ -1,0 +1,29 @@
+body {
+  margin: 0
+}
+.container{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
+}
+.titulo{
+  text-align: center;
+  clear: both;
+  background-color: #c4170c;
+  color: white;
+  border: 20px solid #c4170c;
+  font-size: 25px;
+  font-weight: bold;
+}
+.noticia{
+  float: left;
+  text-align: justify;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  width: 42%;
+  padding: 30px;
+  margin: 60px;
+  background-color: white;
+}
+.not1{
+  margin-left: 80px;
+}
