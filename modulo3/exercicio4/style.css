@@ -1,0 +1,26 @@
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+img{
+  height: 100%;
+  float: left;
+}
+.fundo{
+  background: rgba(0, 191, 255, 0.5);
+	position: absolute;
+	bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: white;
+  text-align: left;
+}
+.fundo p{
+  display: none;
+}
+.fundo:hover p{
+  display: block;
+}
