@@ -1,26 +1,26 @@
-body{    
+body{
   background-image: url("imagens/streetfighter.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  font-family: 'Open Sans', sans-serif; 
+  font-family: 'Open Sans', sans-serif;
 }
-.menu{    
+.menu{
   background-color:	rgba(179, 179, 179,0.5);
-  border: 1px solid lightgray;  
-  padding: 0px 30px; 
-  border-radius: 10pt; 
+  border: 1px solid lightgray;
+  padding: 0px 30px;
+  border-radius: 10pt;
   position: absolute;
   left: 50%;
   top: 42%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
 }
 .menu ul{
   padding: 0;
   list-style: none;
 }
 .menu li{
-  display: inline-block;  
-  padding: 0px 20px; 
+  display: inline-block;
+  padding: 0px 20px;
   font-weight: bold;
 }
 .menu .link{
@@ -35,9 +35,9 @@ body{
   right: 24%;
   background: #e6e6e6	; 
 }
-.corpo .titulo{  
-  background: #4d4d4d;		  
-  padding: 20px 10px;   
+.corpo .titulo{
+  background: #4d4d4d;
+  padding: 20px 10px;
   color: #e6e6e6	;
   text-align: left;
   font-size: 24px;
@@ -60,7 +60,7 @@ body{
   margin:10px 6px 40px;;  
 }
 .corpo .conteudo .ficha{
-  font-size: 28px;  
+  font-size: 28px;
 }
 .corpo .conteudo .sobre{
   height: 300px;
