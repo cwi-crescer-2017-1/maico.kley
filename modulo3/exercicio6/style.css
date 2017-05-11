@@ -1,0 +1,11 @@
+.container-fluid {
+  height: 100vh;
+  margin: 0;
+}
+.row {
+  height: 25%;
+}
+.row div {
+  border: 3px solid black;
+  height: 100%;
+}

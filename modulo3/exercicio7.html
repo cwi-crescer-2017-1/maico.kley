@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="style.css">-->
+  </head>
+  <body>
+    <form>
+      <div class="container-fluid">
+        <h1>Formulário de Cadastro</h1>
+        <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="nome" placeholder="Ex.: Maico Kley">
+            </div>
+            <div class="col-md-6">
+              <label for="email1">Email</label>
+              <input type="email" class="form-control" id="email1" placeholder="Ex.: maico.kley@cwi.com.br">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="date">Date</label>
+              <input id="date" type="date" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label for="sel1">Estado</label>
+                <select class="form-control" id="sel1"</option>>
+                  <option>Rio Grande do Sul</option>
+                  <option>Bahia</option>
+                </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="cidade">Cidade</label>
+              <input type="text" class="form-control" id="cidade" placeholder="Ex.: São Leopoldo">
+            </div>
+            <div class="col-md-6">
+              <label for="sel2">Sexo</label>
+                <select class="form-control" id="sel2"</option>>
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                </select>
+            </div>
+          </div>
+        <hr>
+        <div class="row" >
+          <div  class="col-md-12 text-right" >
+              <input class="btn btn-primary" type="submit" value="Enviar">
+              <input class="btn btn-default" type="reset" value="Limpar">
+         </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
