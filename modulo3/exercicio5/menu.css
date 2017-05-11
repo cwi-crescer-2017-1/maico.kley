@@ -32,7 +32,8 @@ body{
   position: absolute;
   top: 55%;
   left: 24%;
-  right: 24%; 
+  right: 24%;
+  background: #e6e6e6	; 
 }
 .corpo .titulo{  
   background: #4d4d4d;		  
@@ -43,8 +44,7 @@ body{
   font-weight: bold;
 }
 .corpo .conteudo{
-  padding: 10px 15px;
-  background: #e6e6e6	;
+  padding: 10px 15px;  
 }
 .corpo .conteudo h1{
   font-size: 24px;
@@ -56,18 +56,15 @@ body{
   text-align: justify;
 }
 .corpo .conteudo img{
-  float: left;   
+  float: left; 
+  margin:10px 6px 40px;;  
 }
 .corpo .conteudo .ficha{
   font-size: 28px;  
-}
-.corpo .conteudo .descricao{  
-  padding: 0px 10px;
-  text-align: left; 
-  line-height: 20px; 
-  margin-left: 260px; 
 }
 .corpo .conteudo .sobre{
   height: 300px;
   width: 290px;
 }
+
+
