@@ -52,11 +52,14 @@ function fibo(x) {
  function queroCafe(mascada,preco){
    var menor = 0;
    for (var i = 0; i < (preco.length-1); i++) {
-     if (preco[i]<preco[i+1]) {
-        menor = preco[i];
-        preco[i]=preco[i+1];
-        preco[i+1]=menor;
+     for (var j = i+1; j < (preco.length); j++) {
+       if (preco[i]>preco[j]) {
+          menor = preco[i];
+          preco[i]=preco[j];
+          preco[j]=menor;
+       }
      }
+     console.log(preco[i]);
    }
    var batata = "";
    for (var i = 0; i < preco.length; i++) {
