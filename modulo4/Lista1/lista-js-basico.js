@@ -38,14 +38,6 @@ function somar(a,b){
   return a+b;
 }
 //Ex 5
-/*
-inteiro Fibonacci (inteiro k)
-{
-se k = 1: devolvo 1;
-se k = 2: devolvo 1;
-devolvo Fibonacci(k - 1) + Fibonacci (k - 2);
-}
-*/
 function fiboSum(x) {
   var retorno = 0;
   for (var i = 0; i <= x; i++) {
@@ -55,4 +47,22 @@ function fiboSum(x) {
 }
 function fibo(x) {
   return (x < 2) ? x : fibo(x - 1) + fibo(x - 2);
+}
+//Ex 6
+ function queroCafe(mascada,preco){
+   var menor = 0;
+   for (var i = 0; i < (preco.length-1); i++) {
+     if (preco[i]<preco[i+1]) {
+        menor = preco[i];
+        preco[i]=preco[i+1];
+        preco[i+1]=menor;
+     }
+   }
+   var batata = "";
+   for (var i = 0; i < preco.length; i++) {
+     if (mascada>=preco[i]) {
+       batata += preco[i] +',';
+     }
+   }
+   return batata;
 }
