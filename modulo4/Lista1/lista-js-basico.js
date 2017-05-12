@@ -51,15 +51,14 @@ function fibo(x) {
 //Ex 6
  function queroCafe(mascada,preco){
    var menor = 0;
-   for (var i = 0; i < (preco.length-1); i++) {
+   for (var i = 0; i < (preco.length); i++) {
      for (var j = i+1; j < (preco.length); j++) {
        if (preco[i]>preco[j]) {
           menor = preco[i];
           preco[i]=preco[j];
           preco[j]=menor;
        }
-     }
-     console.log(preco[i]);
+     }     
    }
    var batata = "";
    for (var i = 0; i < preco.length; i++) {
