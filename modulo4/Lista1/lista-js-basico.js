@@ -10,14 +10,15 @@ function daisyGame(x) {
 }
 //Ex 2
 function maiorTexto(x) {
-  var tamanho = x[0];
-  for (var i = 1; i < x.length; i++) {
-    if (x[0].length<x[i].length) {
+  var tamanho = x.length > 0 ? x[0] : "";
+  for (let i = 1; i < x.length; i++) {
+    if (tamanho.length<x[i].length) {
       tamanho = x[i];
     }
   }
   return tamanho;
 }
+//let manter a variavel apenas dentro do escopo
 //Ex 3
 function instrutorQuerido(x) {
   for (var i = 0; i < x.length; i++) {
@@ -58,7 +59,7 @@ function fibo(x) {
           preco[i]=preco[j];
           preco[j]=menor;
        }
-     }     
+     }
    }
    var batata = "";
    for (var i = 0; i < preco.length; i++) {
