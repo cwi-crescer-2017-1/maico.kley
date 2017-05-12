@@ -19,15 +19,40 @@ function maiorTexto(x) {
   return tamanho;
 }
 //Ex 3
-/*var calcular = function(funcao, a, b) {
-  //return funcao(arguments[0], arguments[1])
-  return typeof funcao === "function" && funcao(a, b);
-}*/
-function intrutorQuerido(x) {
+function instrutorQuerido(x) {
   for (var i = 0; i < x.length; i++) {
     console.log('olá querido instrutor', x[i]);
   }
 }
-function imprime(lista, funcao) {  
+function imprime(lista, funcao) {
   return typeof funcao === "function" && funcao(lista);
+}
+//Ex 4
+function adicionar(x) {
+   function adicionarInterno(y) {
+      return somar(x, y);
+   }
+   return adicionarInterno;
+}
+function somar(a,b){
+  return a+b;
+}
+//Ex 5
+/*
+inteiro Fibonacci (inteiro k)
+{
+se k = 1: devolvo 1;
+se k = 2: devolvo 1;
+devolvo Fibonacci(k - 1) + Fibonacci (k - 2);
+}
+*/
+function fiboSum(x) {
+  var retorno = 0;
+  for (var i = 0; i <= x; i++) {
+    retorno = retorno + fibo(i);
+  }
+  return retorno;
+}
+function fibo(x) {
+  return (x < 2) ? x : fibo(x - 1) + fibo(x - 2);
 }
