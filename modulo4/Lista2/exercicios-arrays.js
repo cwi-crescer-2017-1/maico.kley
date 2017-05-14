@@ -36,3 +36,20 @@ function mediaDeEpisodios(series) {
   }
   return numEpisodios/numSeries;
 }
+//Ex4
+function procurarPorNome(series, nome) {
+  var retorno;
+  var utilidade;
+  for (let i in series) {
+    utilidade = series[i].elenco;
+    for (let j in utilidade) {
+      if (utilidade[j].match(nome)) {
+        retorno = true;
+        break;
+      } else {
+        retorno = false;
+      }
+    }
+  }
+  return retorno;
+}
