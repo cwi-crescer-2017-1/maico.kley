@@ -82,3 +82,21 @@ function queroTitulo(titulo) {
   }
   return retorno;
 }
+//Ex7
+function creditosIlluminatis(series) {
+  var retorno = new Array();
+  retorno.push(series.titulo)
+  retorno.push("--Diretor(es)--");
+  series.diretor.sort();
+  series.diretor.reverse()
+  for (let i in series.diretor){
+    retorno.push(series.diretor[i]);
+  }
+  retorno.push("--Atores--");
+  series.elenco.sort();
+  series.elenco.reverse()
+  for (let i in series.elenco){
+    retorno.push(series.elenco[i]);
+  }
+  return retorno;
+}
