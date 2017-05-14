@@ -53,3 +53,9 @@ function procurarPorNome(series, nome) {
   }
   return retorno;
 }
+//Ex5
+function mascadaEmSerie(series){
+  var mascadaDiretor = 100000*series.diretor.length;
+  var mascadaAtor = 40000*series.elenco.length;
+  return mascadaDiretor+mascadaAtor;
+}
