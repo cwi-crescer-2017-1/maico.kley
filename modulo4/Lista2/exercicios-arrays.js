@@ -59,3 +59,26 @@ function mascadaEmSerie(series){
   var mascadaAtor = 40000*series.elenco.length;
   return mascadaDiretor+mascadaAtor;
 }
+//Ex6
+function queroGenero(genero) {
+  var retorno = new Array();
+  var utilidade;
+  for(let i in series){
+    utilidade = series[i].genero;
+    for (let j in utilidade) {
+      if (utilidade[j].match(genero)) {
+        retorno.push(series[i].titulo);
+      }
+    }
+  }
+  return retorno;
+}
+function queroTitulo(titulo) {
+  var retorno = new Array();
+  for (let i in series) {
+    if (series[i].titulo.match(titulo)) {
+      retorno.push(series[i].titulo);
+    }
+  }
+  return retorno;
+}
