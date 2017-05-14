@@ -15,3 +15,14 @@ function seriesInvalidas(array) {
   }
   return retorno;
 }
+//Ex2
+function filtrarSeriesPorAno(series, ano) {
+  var retorno = new Array();
+  for (let i in series) {
+    console.log(series[i]);
+    if(series[i].anoEstreia>=ano){
+      retorno.push(series[i].titulo);
+    }
+  }
+  return retorno;
+}
