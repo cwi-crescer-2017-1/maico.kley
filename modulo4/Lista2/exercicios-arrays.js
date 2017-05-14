@@ -19,10 +19,20 @@ function seriesInvalidas(array) {
 function filtrarSeriesPorAno(series, ano) {
   var retorno = new Array();
   for (let i in series) {
-    console.log(series[i]);
     if(series[i].anoEstreia>=ano){
       retorno.push(series[i].titulo);
     }
   }
   return retorno;
+}
+//Ex3
+function mediaDeEpisodios(series) {
+  var numEpisodios = 0;
+  var numSeries = 0;
+  for (let i in series) {
+    numSeries++;
+    numEpisodios += series[i].numeroEpisodios;
+    console.log(numEpisodios, numSeries);
+  }
+  return numEpisodios/numSeries;
 }
