@@ -100,3 +100,36 @@ function creditosIlluminatis(series) {
   }
   return retorno;
 }
+//Ex8
+function serieIlluminati() {
+  var retorno = "#";
+  var validacao;
+  var elenco;
+  var ator;
+  for (let i in series) {
+    elenco = series[i].elenco;
+    validacao = abreviacao(elenco);
+    if (validacao == true) {
+      for (let j in elenco) {
+        ator = elenco[j];
+        retorno += ator.substr((ator.indexOf(" ")+1), 1)
+      }
+    }
+  }
+  return retorno
+}
+function abreviacao(elenco) {
+  var validacao;
+  for (let i in elenco) {
+    var ator = elenco[i]
+    if(ator[ator.indexOf(" ")+2]==".") {
+      validacao=true
+    } else {
+      validacao=false;
+      continue;
+    }
+  }
+  return validacao;
+}
+
+/*n = str.substr((str.lastIndexOf(" ")+1), 1)*/
