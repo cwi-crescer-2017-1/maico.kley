@@ -38,16 +38,13 @@ function mediaDeEpisodios(series) {
 }
 //Ex4
 function procurarPorNome(series, nome) {
-  var retorno;
+  var retorno = false;
   var utilidade;
   for (let i in series) {
     utilidade = series[i].elenco;
     for (let j in utilidade) {
       if (utilidade[j].match(nome)) {
         retorno = true;
-        break;
-      } else {
-        retorno = false;
       }
     }
   }
@@ -131,5 +128,3 @@ function abreviacao(elenco) {
   }
   return validacao;
 }
-
-/*n = str.substr((str.lastIndexOf(" ")+1), 1)*/
