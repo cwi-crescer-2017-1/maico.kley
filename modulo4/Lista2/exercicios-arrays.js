@@ -1,4 +1,15 @@
 //Ex1
+/*
+arrow function
+forEach
+map
+filter
+reduce
+find
+object
+Pesquisar sobre e refatorar.
+template strings
+*/
 function seriesInvalidas(array) {
   var retorno = "Séries inválidas: ";
   for (let i in array) {
