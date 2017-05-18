@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.6.4/angular.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myController">
+      <ul ng-repeat="instrutor in instrutores">
+        <li>{{instrutor.nome | mascada}}</li>
+      </ul>
+    </div>
+    <script src="exemplo2.js"></script>
+  </body>
+</html>
