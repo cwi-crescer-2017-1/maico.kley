@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.6.4/angular.js" charset="utf-8"></script>
+    <script src="exemplo.js"></script>
+  </head>
+  <body ng-app="container">
+    <div ng-controller="datas">
+      <input type="text" ng-model="entrada" placeholder="ex: dd.MM.yyyy">
+      <button type="button" ng-click="clicar()">Aperte Aqui!</button>
+      <span>{{datavalida | date}}</span>
+    </div>
+  </body>
+</html>
