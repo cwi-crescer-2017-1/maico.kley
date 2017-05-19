@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.angularjs.org/1.6.4/angular.js"></script>
+  </head>
+  <body ng-app="app">
+    <div class="container" ng-controller="MainController">
+      <form novalidate name="meuForm">
+        <label for="nome">Novo Nome:</label>
+        <input type="text" name="nome" ng-model="novoNome" required>
+        <button ng-click="incluir(novoNome)">Incluir!</button>
+      </form>
+      <h1>Nomes</h1>
+      <ul ng-repeat="n in nomes">
+        <li>{{n}}</li>
+      </ul>
+    </div>
+    <script src="exemplo.js"></script>
+  </body>
+</html>

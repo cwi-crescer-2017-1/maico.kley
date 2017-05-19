@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.angularjs.org/1.6.4/angular.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myController">
+      <form novalidate name="meuForm">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" ng-model="instrutor.primeiroNome" required ng-minlength="3" ng-maxlength="20"><br><hr>
+
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" ng-model="instrutor.segundoNome" ng-maxlength="30"><br><hr>
+
+        <label for="campoIdade">Idade: </label>
+        <input type="number" name="campoIdade" ng-model="instrutor.idade" required><br><hr>
+
+        <label for="campoEmail">E-mail: </label>
+        <input type="email" name="campoEmail" ng-model="instrutor.email" required><br><hr>
+
+        <label for="validacaoA">Ja ministrou aula: </label>
+        <input type="checkbox" name="validacaoA" ng-model="instrutor.confirma"><br><hr>
+
+        <label for="lAulas">Lista de aulas: </label>
+        <select ng-model="instrutor.listaAulas" name="lAulas" ng-options="x for x in aulas"></select><br><hr>
+
+        <input type="submit" ng-click="incluir(instrutor)" value="Inserir" />
+      </form>
+    </div>
+    <script src="exemplo2.js"></script>
+  </body>
+</html>
