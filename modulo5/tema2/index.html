@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.6.4/angular.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myController">
+      <div ng-repeat="instrutor in instrutores | orderBy: 'numero'">
+          <p>{{instrutor.numero | lpad}} - {{instrutor.aula | upper}} {{instrutor.nome | mascada}}</p>
+        </div>
+      </div>
+    </div>
+    <script src="instrutores.js"></script>
+  </body>
+</html>
