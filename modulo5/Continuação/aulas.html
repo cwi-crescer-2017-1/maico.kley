@@ -1,0 +1,28 @@
+<h2>Aulas</h2>
+<form novalidate name="meuForm">
+  <label for="aula">Nova Aula:</label>
+  <input type="text" name="aula" class="form-control" ng-model="novaAula" required>
+  <button ng-click="incluir(novaAula)" class="btn btn-default">Incluir!</button>
+
+  <label for="aula">Mudar nome: </label>
+  <select name="aula" class="form-control" ng-model="listaAula">
+    <option ng-repeat="(aulaIndex, aula) in aulas" value="{{aula.nome}}">{{aula.nome}}</option>
+  </select>
+  <label for="aula1">Nome alterado: </label>
+  <input type="text" name="aula1" class="form-control" ng-model="alterarAula" required>
+  <button  data-ng-click="alterar($index)" class="btn btn-default">Alterar!</button>
+
+
+</form>
+<table>
+  <tr>
+    <td>--</td>
+    <td>Aula</td>
+    <td>ID</td>
+  </tr>
+  <tr ng-repeat="aula in aulas | orderBy: 'nome'">
+    <td><input type="button" name="excluir" class="btn btn-default" ng-click="remover($index)" value="Apagar"></td>
+    <td>{{aula.nome}}</td>
+    <td>{{aula.id}}</td>
+  </tr>
+</table>

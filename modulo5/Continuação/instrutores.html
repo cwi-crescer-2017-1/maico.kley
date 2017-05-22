@@ -1,0 +1,54 @@
+<h2>Instrutores</h2>
+<form novalidate>
+  <label for="nome">Nome: </label>
+  <input type="text" name="nome" class="form-control" ng-model="instrutor.nome" required ng-minlength="3" ng-maxlength="20">
+
+  <label for="sobrenome">Sobrenome: </label>
+  <input type="text" name="sobrenome" class="form-control" ng-model="instrutor.sobrenome" ng-maxlength="30">
+
+  <label for="campoIdade">Idade: </label>
+  <input type="number" name="campoIdade" class="form-control" ng-model="instrutor.idade" required>
+
+  <label for="campoEmail">E-mail: </label>
+  <input type="email" name="campoEmail" class="form-control" ng-model="instrutor.email" required>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="validacaoA"  ng-model="instrutor.dandoAula"> Já ministrou aula
+    </label>
+  </div>
+
+  <label for="aula">Lista de aulas: </label>
+  <select name="aula" class="form-control" ng-model="listaAula">
+    <option ng-repeat="(aulaIndex, aula) in aulas" value="{{aula.nome}}">{{aula.nome}}</option>
+  </select>
+
+  <label for="imagem">Imagem: </label>
+  <input type="text" name="imagem" class="form-control" ng-model="instrutor.urlFoto">
+
+  <input type="submit" ng-click="incluir(instrutor)" class="btn btn-default" value="Incluir" />
+</form>
+<table>
+  <tr>
+    <td>--</td>
+    <td>ID</td>
+    <td>Nome</td>
+    <td>Sobrenome</td>
+    <td>Idade</td>
+    <td>Email</td>
+    <td>Deu aula</td>
+    <td>Aulas</td>
+    <td>Imagem</td>
+  </tr>
+  <tr ng-repeat="instrutor in instrutores | orderBy: 'nome'">
+    <td><input type="button" name="excluir" class="btn btn-default" ng-click="remover($index)" value="Apagar"></td>
+    <td>{{instrutor.id}}</td>
+    <td>{{instrutor.nome}}</td>
+    <td>{{instrutor.sobrenome}}</td>
+    <td>{{instrutor.idade}}</td>
+    <td>{{instrutor.email}}</td>
+    <td>{{instrutor.dandoAula}}</td>
+    <td>{{aulas[instrutor.aula].nome}}</td>
+    <td><a href="{{instrutor.urlFoto}}" target="_blank">Link</a></td>
+  </tr>
+</table>
