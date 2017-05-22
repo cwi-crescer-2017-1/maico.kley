@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.6.4/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myController" class="form-group">
+      <h1>CRUD Aulas e Instrutores</h1>
+      <h2>Aulas</h2>
+      <form novalidate name="meuForm">
+        <label for="aula">Nova Aula:</label>
+        <input type="text" name="aula" class="form-control" ng-model="novaAula" required>
+        <button ng-click="incluir(novaAula)" class="btn btn-default">Incluir!</button>
+
+        <label for="aula">Mudar nome: </label>
+        <select name="aula" class="form-control" ng-model="listaAula">
+          <option ng-repeat="(aulaIndex, aula) in aulas" value="{{aula.nome}}">{{aula.nome}}</option>
+        </select>
+        <label for="aula1">Nome alterado: </label>
+        <input type="text" name="aula1" class="form-control" ng-model="alterarAula" required>
+        <button  data-ng-click="alterar($index)" class="btn btn-default">Alterar!</button>
+
+
+      </form>
+      <table>
+        <tr>
+          <td>--</td>
+          <td>Aula</td>
+          <td>ID</td>
+        </tr>
+        <tr ng-repeat="aula in aulas | orderBy: 'nome'">
+          <td><input type="button" name="excluir" class="btn btn-default" ng-click="remover($index)" value="Apagar"></td>
+          <td>{{aula.nome}}</td>
+          <td>{{aula.id}}</td>
+        </tr>
+      </table>
+      <h2>Instrutores</h2>
+      <form novalidate>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" class="form-control" ng-model="instrutor.nome" required ng-minlength="3" ng-maxlength="20">
+
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" class="form-control" ng-model="instrutor.sobrenome" ng-maxlength="30">
+
+        <label for="campoIdade">Idade: </label>
+        <input type="number" name="campoIdade" class="form-control" ng-model="instrutor.idade" required>
+
+        <label for="campoEmail">E-mail: </label>
+        <input type="email" name="campoEmail" class="form-control" ng-model="instrutor.email" required>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="validacaoA"  ng-model="instrutor.dandoAula"> Já ministrou aula
+          </label>
+        </div>
+
+        <label for="aula">Lista de aulas: </label>
+        <select name="aula" class="form-control" ng-model="listaAula">
+          <option ng-repeat="(aulaIndex, aula) in aulas" value="{{aula.nome}}">{{aula.nome}}</option>
+        </select>
+
+        <label for="imagem">Imagem: </label>
+        <input type="text" name="imagem" class="form-control" ng-model="instrutor.urlFoto">
+
+        <input type="submit" ng-click="incluir(instrutor)" class="btn btn-default" value="Incluir" />
+      </form>
+      <table>
+        <tr>
+          <td>--</td>
+          <td>ID</td>
+          <td>Nome</td>
+          <td>Sobrenome</td>
+          <td>Idade</td>
+          <td>Email</td>
+          <td>Deu aula</td>
+          <td>Aulas</td>
+          <td>Imagem</td>
+        </tr>
+        <tr ng-repeat="instrutor in instrutores | orderBy: 'nome'">
+          <td><input type="button" name="excluir" class="btn btn-default" ng-click="remover($index)" value="Apagar"></td>
+          <td>{{instrutor.id}}</td>
+          <td>{{instrutor.nome}}</td>
+          <td>{{instrutor.sobrenome}}</td>
+          <td>{{instrutor.idade}}</td>
+          <td>{{instrutor.email}}</td>
+          <td>{{instrutor.dandoAula}}</td>
+          <td>{{aulas[instrutor.aula].nome}}</td>
+          <td><a href="{{instrutor.urlFoto}}" target="_blank">Link</a></td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
+    <script src="crud.js"></script>
+  </body>
+</html>
