@@ -4,8 +4,8 @@
   padding: 0px 30px;
   position: absolute;
   left: 50%;
-  top: 550pt;
-  transform: translate(-50%, -50%);
+  top: 50px;
+  transform: translate( 0%, -50%);
 }
 table {
     font-family: arial, sans-serif;
