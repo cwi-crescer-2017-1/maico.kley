@@ -4,3 +4,6 @@ C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula1\Demo1\bin\Debug\De
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula1\Demo1\obj\Debug\Demo1.csprojResolveAssemblyReference.cache
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula1\Demo1\obj\Debug\Demo1.exe
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula1\Demo1\obj\Debug\Demo1.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula1\Demo1\bin\Debug\Demo1.exe.config
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula1\Demo1\obj\Debug\Demo1.exe
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula1\Demo1\obj\Debug\Demo1.pdb
