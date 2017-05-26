@@ -1,0 +1,5 @@
+C:\Users\Usuario\Desktop\ExercicioLambdaLinq\ExercicioLambdaLinq\RepositorioFuncionarios\bin\Debug\Repositorio.dll
+C:\Users\Usuario\Desktop\ExercicioLambdaLinq\ExercicioLambdaLinq\RepositorioFuncionarios\bin\Debug\Repositorio.pdb
+C:\Users\Usuario\Desktop\ExercicioLambdaLinq\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\ExercicioLambdaLinq\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.dll
+C:\Users\Usuario\Desktop\ExercicioLambdaLinq\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.pdb
