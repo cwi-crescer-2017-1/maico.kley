@@ -1,0 +1,12 @@
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\ConsoleApplicationTeste.exe.config
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\ConsoleApplicationTeste.exe
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\ConsoleApplicationTeste.pdb
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EditoraCrescer.dll
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EntityFramework.dll
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EditoraCrescer.pdb
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EntityFramework.xml
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\obj\Debug\ConsoleApplicationTeste.csprojResolveAssemblyReference.cache
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\obj\Debug\ConsoleApplicationTeste.exe
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\ConsoleApplicationTeste\obj\Debug\ConsoleApplicationTeste.pdb
