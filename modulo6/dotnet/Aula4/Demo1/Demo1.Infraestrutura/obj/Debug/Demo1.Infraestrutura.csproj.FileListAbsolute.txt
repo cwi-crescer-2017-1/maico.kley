@@ -5,3 +5,10 @@ C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infrae
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.csprojResolveAssemblyReference.cache
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.dll
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\bin\Debug\Demo1.Infraestrutura.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\bin\Debug\Demo1.Infraestrutura.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\bin\Debug\Demo1.Dominio.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\bin\Debug\Demo1.Dominio.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula4\Demo1\Demo1.Infraestrutura\obj\Debug\Demo1.Infraestrutura.pdb
