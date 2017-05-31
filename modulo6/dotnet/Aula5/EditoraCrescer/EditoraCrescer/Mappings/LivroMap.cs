@@ -1,7 +1,7 @@
 ﻿using EditoraCrescer.Entidades;
 using System.Data.Entity.ModelConfiguration;
 
-namespace EditoraCrescer
+namespace EditoraCrescer.Mappings
 {
     internal class LivroMap : EntityTypeConfiguration<Livro>
     {

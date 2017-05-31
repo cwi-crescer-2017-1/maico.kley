@@ -49,12 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Revisor.cs" />
     <Compile Include="Mappings\AutorMap.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="Entidades\Autor.cs" />
     <Compile Include="Entidades\Livro.cs" />
     <Compile Include="Mappings\LivroMap.cs" />
+    <Compile Include="Mappings\RevisorMap.cs" />
     <Compile Include="Migrations\201705301947350_CriacaoDoBanco.cs" />
     <Compile Include="Migrations\201705301947350_CriacaoDoBanco.Designer.cs">
       <DependentUpon>201705301947350_CriacaoDoBanco.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using EditoraCrescer;
+using EditoraCrescer.Entidades;
 using EditoraCrescer.Repositorios;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,18 @@ namespace EditoraCrescer.Api.Controllers
             var livros = repositorio.Obter();
 
             return Ok(livros);
+        }
+
+        public IHttpActionResult Post(Livro livro)
+        {
+            repositorio.Adicionar(livro);
+            return Ok();
+        }
+
+        public IHttpActionResult Remove(int id)
+        {
+            repositorio.Deletar(id);
+            return Ok();
         }
     }
 }

@@ -3,11 +3,11 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace EditoraCrescer.Mappings
 {
-    internal class AutorMap : EntityTypeConfiguration<Autor>
+    internal class RevisorMap : EntityTypeConfiguration<Revisor>
     {
-        public AutorMap()
+        public RevisorMap()
         {
-            ToTable("Autores");
+            ToTable("Revisores");
             Property(p => p.Nome).HasMaxLength(300);
         }
     }
