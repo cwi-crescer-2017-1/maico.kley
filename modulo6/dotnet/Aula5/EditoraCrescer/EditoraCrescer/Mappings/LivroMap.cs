@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace EditoraCrescer.Mappings
 {
-    internal class LivroMap : EntityTypeConfiguration<Livro>
+    public class LivroMap : EntityTypeConfiguration<Livro>
     {
         public LivroMap()
         {
@@ -14,6 +14,10 @@ namespace EditoraCrescer.Mappings
             HasRequired(x => x.Autor)
                 .WithMany()
                 .HasForeignKey(x => x.IdAutor);
+
+            HasRequired(x => x.Revisor)
+                .WithMany()
+                .HasForeignKey(x => x.IdRevisor);
         }
     }
 }

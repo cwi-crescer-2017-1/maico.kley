@@ -10,3 +10,4 @@ C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\Edi
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.pdb
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.CriacaoDoBanco.resources
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Infraestrutura.csproj.GenerateResource.Cache
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.TabelaRevisores.resources

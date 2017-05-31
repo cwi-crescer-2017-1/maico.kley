@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace EditoraCrescer.Mappings
 {
-    internal class AutorMap : EntityTypeConfiguration<Autor>
+    public class AutorMap : EntityTypeConfiguration<Autor>
     {
         public AutorMap()
         {
