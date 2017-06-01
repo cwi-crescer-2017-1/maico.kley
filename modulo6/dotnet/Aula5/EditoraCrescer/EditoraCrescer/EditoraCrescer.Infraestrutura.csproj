@@ -61,9 +61,9 @@
     <Compile Include="Migrations\201705301947350_CriacaoDoBanco.Designer.cs">
       <DependentUpon>201705301947350_CriacaoDoBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705312002290_TabelaRevisores.cs" />
-    <Compile Include="Migrations\201705312002290_TabelaRevisores.Designer.cs">
-      <DependentUpon>201705312002290_TabelaRevisores.cs</DependentUpon>
+    <Compile Include="Migrations\201706011319226_TabelaRevisores.cs" />
+    <Compile Include="Migrations\201706011319226_TabelaRevisores.Designer.cs">
+      <DependentUpon>201706011319226_TabelaRevisores.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +79,8 @@
     <EmbeddedResource Include="Migrations\201705301947350_CriacaoDoBanco.resx">
       <DependentUpon>201705301947350_CriacaoDoBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705312002290_TabelaRevisores.resx">
-      <DependentUpon>201705312002290_TabelaRevisores.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706011319226_TabelaRevisores.resx">
+      <DependentUpon>201706011319226_TabelaRevisores.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

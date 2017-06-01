@@ -13,7 +13,7 @@ namespace EditoraCrescer.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201705312002290_TabelaRevisores"; }
+            get { return "201706011319226_TabelaRevisores"; }
         }
         
         string IMigrationMetadata.Source

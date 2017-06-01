@@ -11,3 +11,16 @@ C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\Edi
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.CriacaoDoBanco.resources
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Infraestrutura.csproj.GenerateResource.Cache
 C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.TabelaRevisores.resources
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EditoraCrescer.dll.config
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EditoraCrescer.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EditoraCrescer.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.CriacaoDoBanco.resources
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Infraestrutura.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.dll
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.pdb
+C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer\obj\Debug\EditoraCrescer.Migrations.TabelaRevisores.resources
