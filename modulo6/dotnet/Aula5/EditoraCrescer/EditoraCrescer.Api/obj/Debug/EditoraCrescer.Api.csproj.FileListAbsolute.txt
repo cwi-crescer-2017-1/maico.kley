@@ -66,3 +66,6 @@ C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\E
 C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\obj\Debug\EditoraCrescer.Api.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\obj\Debug\EditoraCrescer.Api.dll
 C:\Users\Usuario\Desktop\GitHub\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\obj\Debug\EditoraCrescer.Api.pdb
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\bin\System.Web.Cors.dll
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\bin\System.Web.Http.Cors.dll
+C:\Users\maico.kley\Documents\maico.kley\modulo6\dotnet\Aula5\EditoraCrescer\EditoraCrescer.Api\bin\System.Web.Http.Cors.xml
